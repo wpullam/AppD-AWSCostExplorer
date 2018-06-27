@@ -1,0 +1,1 @@
+javac -cp /Users/wayne.pullam/Desktop/WayneFiles/Products/AWS/CostExplorerExtension/AWSCostExplorerMonitor:/Users/wayne.pullam/AWS/aws-java-sdk-1.11.319/lib/aws-java-sdk-1.11.319.jar:/Users/wayne.pullam/Desktop/WayneFiles/Products/AWS/BillingExtension/MachineAgent-4.4.3.1061/machineagent.jar CostExplorerMonitor.java

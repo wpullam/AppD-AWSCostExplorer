@@ -1,0 +1,9 @@
+accounts:
+  - awsAccessKey: ""
+    awsSecretKey: ""
+
+#value must match the tag used in the Cost Allocation Tags for the business unit
+businessUnitName: ""
+
+#prefix used to show up metrics in AppDynamics 
+metricPrefix: "Custom Metrics|CostExplorer|"

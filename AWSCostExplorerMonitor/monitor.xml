@@ -1,0 +1,31 @@
+<!--
+  ~   Copyright 2018. AppDynamics LLC and its affiliates.
+  ~   All Rights Reserved.
+  ~   This is unpublished proprietary source code of AppDynamics LLC and its affiliates.
+  ~   The copyright notice above does not evidence any actual or intended publication of such source code.
+  ~
+  -->
+
+<monitor>
+    <name>AWS CostExplorer Monitor</name>
+    <type>managed</type>
+    <description>AWS Cost Explorer Monitoring Extension</description>
+    <monitor-configuration></monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style>
+        <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+        <name>AWS CostExplorer Monitor Run task</name>
+        <display-name>AWS CostExplorer Monitor Run task</display-name>
+        <description>AWS CostExplorer Monitor Run task</description>
+        <type>java</type>
+        <execution-timeout-in-secs>60</execution-timeout-in-secs>
+        <task-arguments>
+			<argument name="config-file" is-required="true" default-value="monitors/AWSCostExplorerMonitor/conf/config.yaml" />
+	</task-arguments>  
+        <java-task>
+            <classpath>aws-costexplorer-monitoring-extension.jar;aws-java-sdk-1.11.319.jar;jackson-databind-2.6.7.1.jar;jackson-core-2.6.7.jar;jackson-annotations-2.6.0.jar</classpath>
+            <impl-class>com.appdynamics.extensions.aws.costexplorer.CostExplorerMonitor</impl-class>
+        </java-task>
+        
+    </monitor-run-task>
+</monitor>
